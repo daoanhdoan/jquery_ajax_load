@@ -1,0 +1,4 @@
+services:
+  jquery_ajax_load:
+    class: Drupal\jquery_ajax_load\JqueryAjaxLoad
+    arguments: ['@event_dispatcher', '@controller_resolver', '@http_kernel.controller.argument_resolver']

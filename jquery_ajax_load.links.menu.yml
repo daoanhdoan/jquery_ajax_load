@@ -1,0 +1,5 @@
+jquery_ajax_load.settings:
+  route_name: jquery_ajax_load.settings
+  title: 'JQuery AJAX Load'
+  description: 'Configure settings for JQuery AJAX Load.'
+  parent: system.admin_config_development

@@ -1,0 +1,9 @@
+name: jQuery AJAX Load
+type: module
+description: API for loading content using jQuery Load.
+package: jQuery Load
+core_version_requirement: ^9
+
+configure: admin/config/development/jquery_ajax_load
+
+

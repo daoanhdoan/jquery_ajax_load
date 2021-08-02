@@ -1,0 +1,45 @@
+<?php
+/**
+* @file
+* Basic Module file.
+*
+*/
+
+/**
+ * Implements @see hook_page_attachments().
+ */
+
+function jquery_ajax_load_page_attachments(&$attachments) {
+  $config = \Drupal::config('jquery_ajax_load.presets');
+  $presets = array();
+  if ($config->getRawData()) {
+    foreach($config->getRawData() as $preset) {
+      $preset['trigger'] = jquery_ajax_load_get_triggers($preset['trigger']);
+      $presets[] = $preset;
+    }
+  }
+
+  $site_name = \Drupal::config('system.site')->get('name');
+  $config = \Drupal::config('jquery_ajax_load.settings');
+  $settings = array(
+    'presets' => $presets,
+    'toggle' => $config->get('toggle'),
+    'animation' => $config->get('animation'),
+    'base_path' => \Drupal::request()->getBaseUrl(),
+    'module_path' => \Drupal::service('module_handler')->getModule('jquery_ajax_load')->getPath(),
+    'site_name' => $site_name,
+  );
+
+  $attachments['#attached']['drupalSettings']['jquery_ajax_load'] = $settings;
+  $attachments['#attached']['library'][] = 'jquery_ajax_load/jquery_ajax_load';
+}
+
+/**
+ * Get trigger classes/ids.
+ */
+function jquery_ajax_load_get_triggers($trigger) {
+  $trigger = explode("\n", $trigger);
+  $trigger = array_filter($trigger);
+  $trigger = implode(',', $trigger);
+  return $trigger;
+}

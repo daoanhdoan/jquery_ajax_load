@@ -1,0 +1,7 @@
+trigger: '.jquery_ajax_load'
+target: '#jquery_ajax_load_target'
+behaviour: replace
+toggle: true
+animation: true
+css: false
+js: false

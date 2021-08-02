@@ -1,0 +1,14 @@
+jquery_ajax_load.settings:
+  path: 'admin/config/development/jquery_ajax_load'
+  defaults:
+    _title: 'JQuery AJAX Load'
+    _form: '\Drupal\jquery_ajax_load\Form\JqueryAjaxLoadSettingsForm'
+  requirements:
+    _permission: 'administer site configuration'
+jquery_ajax_load.load:
+  path: '/jquery_ajax_load/load'
+  defaults:
+    _controller: '\Drupal\jquery_ajax_load\Controller\JqueryAjaxLoadController::load'
+    _title: 'load'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,37 @@
+jquery_ajax_load.settings:
+  type: config_object
+  mapping:
+    toggle:
+      type: boolean
+      label: 'Toggle'
+    animation:
+      type: boolean
+      label: 'Animation'
+    css:
+      type: boolean
+      label: 'CSS'
+    js:
+      type: boolean
+      label: 'JS'
+jquery_ajax_load.presets.*:
+  type: config_object
+  mapping:
+    trigger:
+      type: text
+      label: 'Triger'
+    target:
+      type: text
+      label: 'Target'
+    behaviour:
+      type: text
+      label: 'Behaviour'
+
+
+
+
+
+
+
+
+
+
