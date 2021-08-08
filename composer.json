@@ -1,9 +1,12 @@
 {
-  "name": "daoanhdoan/jquery_ajax_load",
-  "description": "jQuery AJAX Load - API for loading content using jQuery Load.",
-  "type": "drupal-custom-module",
-  "license":"GPL-2.0",
-  "extra": {
-    "installer-name": "jquery_ajax_load"
-  }
+    "name" : "daoanhdoan/jquery_ajax_load",
+    "description": "jQuery AJAX Load - API for loading content using jQuery Load.",
+    "type" : "drupal-custom-module",
+    "license": "GPL-2.0",
+    "extra": {
+        "installer-name": "jquery_ajax_load"
+    },
+    "require": {
+        
+    }
 }
