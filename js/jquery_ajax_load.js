@@ -57,7 +57,7 @@
       }
     } else {
 
-      if (item.behaviour != 'replace') {
+      if (item.behaviour !== 'replace') {
         selector = selector + "-jquery-ajax-load-" + Math.random().toString(36).substring(7);
         loading_html = $('<div>', {id: selector}).html(loading_html);
       }
